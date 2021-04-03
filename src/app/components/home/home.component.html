@@ -1,0 +1,9 @@
+<div class="container text-center">
+ <div class="main-section">
+    <div *ngFor="let app of applications" class="mb-2">
+      <a (click)="navigateUrl(app)" href="javascript:void(0)"><span class="mr-2">{{app.name}}</span> <span><img src="{{app.icon}}" /></span></a>
+    </div>
+ </div>
+</div>
+
+<router-outlet></router-outlet>

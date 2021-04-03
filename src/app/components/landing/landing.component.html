@@ -1,0 +1,33 @@
+<div class="container">
+    <div class="text-center">
+        <h1>Welcome in {{appName}} Landing page</h1>
+        <table class="center">
+            <thead>
+                <tr>
+                    <td *ngFor="let header of emplyeeHeader">
+                        {{header}}
+                      </td>
+                </tr>
+            </thead>
+           <tbody>
+               <tr *ngFor="let employee of employeeData">
+                   <td >
+                     {{employee.id}}
+                   </td>
+                   <td >
+                    {{employee.firstName}}
+                  </td>
+                  <td >
+                    {{employee.lastName}}
+                  </td>
+                  <td >
+                    {{employee.address}}
+                  </td>
+                  <td >
+                    {{employee.phoneNumber}}
+                  </td>
+               </tr>
+           </tbody>
+        </table>
+    </div>
+</div>
