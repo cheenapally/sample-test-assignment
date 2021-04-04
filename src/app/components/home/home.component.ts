@@ -14,9 +14,7 @@ export class HomeComponent implements OnInit {
     this.applications = [
       {name: 'app1', icon: 'https://picsum.photos/20/20'},
       {name: 'app2', icon: 'https://picsum.photos/20/20'},
-      {name: 'app3', icon: 'https://picsum.photos/20/20'},
-      {name: 'app4', icon: 'https://picsum.photos/20/20'},
-      {name: 'app5', icon: 'https://picsum.photos/20/20'}
+      {name: 'app3', icon: 'https://picsum.photos/20/20'}
     ]
   }
 

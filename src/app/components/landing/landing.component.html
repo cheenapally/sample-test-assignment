@@ -1,7 +1,7 @@
 <div class="container">
     <div class="text-center">
         <h1>Welcome in {{appName}} Landing page</h1>
-        <table class="center">
+        <table class="center" *ngIf="appName === 'app1'">
             <thead>
                 <tr>
                     <td *ngFor="let header of emplyeeHeader">
@@ -29,5 +29,18 @@
                </tr>
            </tbody>
         </table>
+
+        <div class="text-center" *ngIf="appName === 'app2'">
+          <ag-grid-angular 
+          style="width: 56%; height: 287px;" 
+          [defaultColDef]="defaultColDef"
+          class="ag-theme-balham"
+          [rowData]="rowData" 
+          [columnDefs]="columnDefs">
+      </ag-grid-angular>
+        </div>
+
+        <div *ngIf="appName === 'app3'">
+          <app-chart-app></app-chart-app>
     </div>
 </div>

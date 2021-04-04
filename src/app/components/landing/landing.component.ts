@@ -11,6 +11,13 @@ export class LandingComponent implements OnInit {
 
   emplyeeHeader: string[];
   employeeData: Object[];
+  columnDefs = [
+    {headerName: 'Make', field: 'make'},
+    {headerName: 'Model', field: 'model'},
+    {headerName: 'Price', field: 'price'}
+];
+defaultColDef: Object;
+rowData = [];
   constructor(private route: ActivatedRoute) { }
    
   ngOnInit(): void {
@@ -25,7 +32,27 @@ export class LandingComponent implements OnInit {
      {id: '1003', firstName: 'Jerry', lastName: 'Cruz', address: 'Texas, USA', phoneNumber: '+1 1423438945'},
      {id: '1004', firstName: 'Akash', lastName: 'Bodapally', address: 'Florida, USA', phoneNumber: '+1 1423344445'},
      {id: '1005', firstName: 'James', lastName: 'Maru', address: 'Florida, USA', phoneNumber: '+1 6423434445'},
-    ]
-  }
+    ];
+
+   this.rowData = [
+    {make: 'Toyota', model: 'Celica', price: 35000},
+    {make: 'Ford', model: 'Mondeo', price: 32000},
+    {make: 'Porsche', model: 'Boxter', price: 72000},
+    {make: 'Toyota', model: 'Celica', price: 35000},
+    {make: 'Ford', model: 'Mondeo', price: 32000},
+    {make: 'Porsche', model: 'Boxter', price: 72000},
+    {make: 'Toyota', model: 'Celica', price: 35000},
+    {make: 'Ford', model: 'Mondeo', price: 32000},
+    {make: 'Porsche', model: 'Boxter', price: 72000}
+];
+
+this.defaultColDef = {
+  flex: 1,
+  minWidth: 150,
+  filter: true,
+  sortable: true
+};
+
+}
 
 }
